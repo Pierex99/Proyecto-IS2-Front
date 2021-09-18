@@ -1,0 +1,257 @@
+.l-main{
+  overflow:hidden;
+}
+/*========= Inicio =========*/
+.home{
+  background:#f8909a;
+}
+.home__container{
+  row-gap: .5rem;
+}
+
+.home__img{
+  width: 280px;
+  justify-self: center;
+}
+
+.home__title{
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.home__description{
+  margin-bottom: 1rem;
+}
+
+.button{
+  display: inline-block;
+  background-color: #DA2535;
+  color: #FFF;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.button:hover{
+  background-color: #C42130;
+  
+}
+
+/*============ Comprar ============*/
+.buy__data{
+  text-align: center;
+}
+
+.buy__description{
+  margin-bottom: 1rem;
+}
+
+.buy__img{
+  width:280px;
+  justify-self: center;
+}
+
+.how__container{
+  grid-template-columns: repeat(autofit, minmax(220px, 1fr));
+}
+
+.how__data{
+  text-align: center;
+  padding: 1rem 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(65,11,16,.15);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.how__data:hover{
+  box-shadow: 0 3px 12px rgba(65, 11, 16, .15);
+}
+
+.how__data h3{
+  align-self: center;
+  margin: 2rem 0;
+  padding: 1rem 1.75rem;
+  border-radius: .5rem;
+  font-size: 1.5rem;
+  color:#fff;
+}
+#how__first{
+  background-color: red;
+}
+#how__second{
+  background-color: rgb(26, 178, 248);
+}
+#how__third{
+  background-color: rgb(3, 179, 3);
+}
+#how__fourth{
+  background-color: rgb(248, 184, 22);
+}
+
+/*================= Cobertura ===================*/
+.coverage__container{
+  grid-template-columns: repeat(2,1fr);
+  padding-bottom: 2rem;
+}
+
+.coverage__content{
+  position: relative;
+  display: grid;
+  padding: .25rem .75rem .75rem;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(65, 11, 16, .15);
+  border-radius: 1rem;
+}
+
+.coverage__content:hover{
+  box-shadow: 0 3px 12px rgba(65, 11, 16, .15);
+}
+
+.coverage__img{
+  width: 110px;
+  justify-self: center;
+  margin-bottom: .25rem;
+}
+.coverage__title{
+  text-align: center;
+  font-size: .938rem;
+}
+@media screen and (min-width: 968px) {
+  .coverage__title{
+    font-size: 1rem;
+  }
+}
+
+
+/*================ Agregar Negocio =================*/
+
+.join{
+  background-color: #DE3B49;
+}
+
+.join__title, .join__description{
+  color:#fff;
+}
+
+.join__description{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.join__button{
+  display: block;
+  text-align: center;
+  background-color: #fff;
+  color: #DA2535;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  font-weight: 600;
+  transition: .3s;
+}
+
+/*============= Media Queries================*/
+@media screen and (min-width: 359px) {
+  .home__img,
+  .buy__img{
+    width: 100%;
+  }
+  .buy__img img{
+    justify-self: center;
+  }
+}
+
+@media screen and (min-width: 576px){
+  .home__container,
+  .buy__container,
+  .how__container,
+  .join__container{
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+  }
+
+  .home__container{
+    padding: 5rem 0 0;
+  }
+  .home__img{
+    order:1;
+  }
+
+  .section-title-center,
+  .buy__data,
+  .join__description{
+    text-align: initial;
+  }
+
+  .home__img,
+  .buy__img,
+  .join__img{
+    width: 100%;
+  }
+
+  .buy__img{
+    order:-1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .home__container{
+    padding: 7rem 2rem 0;
+  }
+
+  .buy__container{
+    padding: 0 2rem;
+  }
+
+  .coverage__container{
+    grid-template-columns: repeat(3 , 224px);
+    justify-content: center;
+  }
+
+  .coverage__content{
+    padding: .5rem 1.5rem 1.5rem;
+  }
+
+  .coverage__img{
+    width: 120px;
+    margin: .5rem 0;
+  }
+
+  .join{
+    background:none;
+  }
+
+  .join__container{
+    background-color: #DE3B49;
+    padding: 2rem;
+    border-radius: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 968px) {
+
+  .home__container,
+  .buy__container,
+  .join__container{
+    column-gap: 5rem;
+  }
+
+  .home__img,
+  .buy__img,
+  .join__img{
+    width: 469px
+  }
+  .how__container{
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 2rem;
+  }
+
+  .coverage__container{
+    grid-template-columns: repeat(4,1fr);
+  }
+  .join__button{
+    width: 50%;
+  }
+}
